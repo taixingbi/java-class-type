@@ -11,12 +11,13 @@ public class App {
         String upcStrInput = "1234";
 
         Map<String, Object> upcMap = new HashMap<>();
-        upcMap.put("key", upcListInput);
+        upcMap.put("key", upcStrInput);
 
         String name = upcMap.get("key").getClass().getName();
         if( name.equals("java.lang.String")){
             System.out.println( name );
-            System.out.println( upcMap.get("key") );
+            String upcStr= (String)upcMap.get("key");
+            System.out.println(upcStr );
 
         }
 
